@@ -7,11 +7,12 @@ namespace PrimeSifting.Tests
   public class PrimeTests
   {
     [TestMethod]
-    public void findPrime_CreatesPrime_Prime()
+    public void findPrime_CreatesInstanceOfPrime_Prime()
     {
       Prime newPrime = new Prime();
-      Assert.AreEqual(typeof(Prime), newPrime.findPrime());
+      Assert.AreEqual(typeof(Prime), newPrime.GetType());
     }
+    
   }
 }
 
