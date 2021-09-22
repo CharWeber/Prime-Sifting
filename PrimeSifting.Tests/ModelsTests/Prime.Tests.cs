@@ -7,10 +7,10 @@ namespace PrimeSifting.Tests
   public class PrimeTests
   {
     [TestMethod]
-    public void findPrime_CreatesListOfNumbers_True()
+    public void findPrime_CreatesPrime_Prime()
     {
       Prime newPrime = new Prime();
-      Assert.AreEqual(typeof(Primes), newPrime.findPrime());
+      Assert.AreEqual(typeof(Prime), newPrime.findPrime());
     }
   }
 }
@@ -22,6 +22,7 @@ namespace PrimeSifting.Tests
 // display that list
 
 // tests list:
+
 // #1 create a list of numbers up to user input
 // #2 removes multiples of numbers incrementally
 // #3 retunrs list of primes
