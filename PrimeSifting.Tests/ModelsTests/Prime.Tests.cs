@@ -8,23 +8,37 @@ namespace PrimeSifting.Tests
   public class PrimeTests
   {
     [TestMethod]
-    public void findPrime_CreatesInstanceOfPrime_Prime()
+    public void findNumbers_CreatesInstanceOfPrime_Prime()
     {
       Prime newPrime = new Prime();
       Assert.AreEqual(typeof(Prime), newPrime.GetType());
     }
     [TestMethod]
-    public void findPrime_CreatesListOfNumbers_List()
+    public void findNumbers_CreatesListOfNumbers_List()
     {
       // Arrange
       Prime newPrime = new Prime();
 
       //Act
       List<int> numList = new List<int>{2, 3, 4, 5};
-      List<int> resultList = newPrime.findPrime(5);
+      List<int> resultList = newPrime.findNumbers(5);
       
       //Assert
       CollectionAssert.AreEqual(numList, resultList);
+    }
+    [TestMethod]
+    public void findPrimes_CreatesListOfPrimes_List()
+    {
+      //arrange
+      Prime newPrime = new Prime();
+      
+      //act
+      List<int> primeList = new List<int>{2,3,5};
+      List<int> numList = newPrime.findNumbers(5);
+      List<int> resultList = newPrime.findPrime(numList);
+      
+      //assert
+      CollectionAssert.AreEqual(primeList, resultList);
     }
   }
 }
